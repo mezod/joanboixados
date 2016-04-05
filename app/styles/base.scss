@@ -1,0 +1,19 @@
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'mixins.scss';
+
+/* GENERAL STYLES */
+@import 'styles';
+
+/* containers */
+@import '../src/containers/App.scss';
+
+/* pages */
+@import '../src/pages/Gallery/Gallery.scss';
+@import '../src/pages/Projects/Projects.scss';
+@import '../src/pages/About/About.scss';
+
+/* components */
+
+/* menu */
+@import '../src/components/Menu/Menu.scss';
