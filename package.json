@@ -4,7 +4,7 @@
   "description": "",
   "main": "app/src/index.js",
   "scripts": {
-    "api:dev": "nodemon api/src/server.js",
+    "api:dev": "nodemon api/server.js",
     "app:dev": "node_modules/.bin/webpack-dev-server",
     "lint": "eslint . --ext .js --ext .jsx",
     "build:dev": "node_modules/.bin/webpack",
