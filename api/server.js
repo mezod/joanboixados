@@ -13,7 +13,7 @@ const routes = require('./routes');
 router.get('/menu', routes.getMenu);
 router.get('/:gallery', routes.getGallery);
 
-app.use(serve(__dirname + '/api/galleries/'));
+app.use(serve(__dirname + '/galleries/'));
 
 // sets the reponse headers to allow cross origin requests
 app.use(cors({

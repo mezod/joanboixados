@@ -1,0 +1,64 @@
+.menu{
+  width: 170px;
+	padding: 50px 0px 0px 50px;
+	height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+
+	.title{
+		background-image: url(#{$logoUrl});
+		background-size: 175px 36px;
+		width: 175px;
+		height: 36px;
+		margin-bottom: 30px;
+	}
+
+	ul{
+		list-style: none;
+		padding-left: 8px;
+		margin-bottom: 25px;
+
+		&.galleries{
+			font-family: 'ProximaNova-Semibold';
+			font-size: 15px;
+	    font-style: normal;
+	    font-weight: 600;
+	    letter-spacing: 0;
+	    line-height: 1.8em;
+	    text-transform: none;
+
+	    li{
+	    	display: list-item;
+    		text-align: match-parent;
+
+    		a{
+		    	padding: 3px 0px;
+
+		    	&.active{
+		    		color: $lightgray;
+		    	}
+		    }
+	    }
+		}
+
+		&.static, &.social{
+	    font-size: 13px;
+	    font-style: normal;
+	    font-weight: 400;
+	    letter-spacing: 0;
+	    line-height: 1.8em;
+	    text-transform: none;
+		}
+
+		a{
+			color: $gray;
+			text-decoration: none;
+
+			&:hover{
+				color: $black;
+			}
+		}
+	}
+}

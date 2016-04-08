@@ -1,0 +1,32 @@
+.slideshow-controls{
+	position: fixed;
+	width: 220px;
+	height: 220px;
+	left: 0;
+	bottom: 0;
+	padding: 50px 0px 50px 58px;
+	background-color: white;
+	z-index: 1030;
+
+	a{
+		display: block;
+		margin-bottom: 10px;
+		font-size: 12px;
+	}
+
+	.description{
+		font-weight: 600;
+		font-size: 15px;
+		margin-bottom: 15px;
+		line-height: 1.6em;
+	}
+
+	.prev, .next{
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.back{
+		cursor: pointer;
+	}
+}

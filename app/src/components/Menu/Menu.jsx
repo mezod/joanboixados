@@ -15,18 +15,40 @@ export default class Menu extends React.Component {
       return res;
     });
   }
+  reload() {
+    // fakes reload of current route
+    const event = new Event('reset');
+    dispatchEvent(event);
+  }
   render() {
     return (
 			<div className="menu">
-        <ul>
+        <div className="title"></div>
+        <ul className="galleries">
         { this.state.galleries.map((obj) => {
-          return <li key={obj}><Link to={obj}>{obj}</Link></li>;
+          return (<li key={obj}><Link activeClassName="active"
+                                      onClick={this.reload.bind(this)}
+                                     to={obj}>{obj}</Link></li>);
         }) }
         </ul>
-				<ul>
+				<ul className="static">
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/gallery">Say hi!</Link></li>
+        </ul>
+        <ul className="social">
+          <li><a href="http://www.listlogs.com/mezod"
+                 target="_blank">Listlogs</a></li>
+          <li><a href="http://www.twitter.com/mezood"
+                 target="_blank">Twitter</a></li>
+          <li><a href="https://ca.wikipedia.org/wiki/Usuari:Mezod"
+                 target="_blank">Wikipedia</a></li>
+          <li><a href="https://www.linkedin.com/in/joanboixados"
+                 target="_blank">Linkedin</a></li>
+          <li><a href="https://github.com/mezod"
+                 target="_blank">Github</a></li>
+          <li><a href="https://www.flickr.com/photos/56589764@N02/"
+                target="_blank">Flickr</a></li>
         </ul>
 			</div>
 		);

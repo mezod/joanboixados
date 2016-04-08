@@ -21,8 +21,9 @@ module.exports = {
 
     // api/galleries/01-Photography => Photography
     var newMatches = matches.map(obj => ({
-      path: obj,
-      description: obj.split('/')[3].split('-').slice(1).join('-').split('.')[0],
+      path: obj.split('/').slice(2).join('/'),
+      date: obj.split('/')[3].split('-').slice(1, 4).join('-'),
+      description: obj.split('/')[3].split('-').slice(4).join('-').split('.')[0],
     }));
 
     this.response.body = newMatches;

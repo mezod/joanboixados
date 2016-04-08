@@ -1,0 +1,12 @@
+.app{
+	height: 100%;
+	width: 100%;
+
+	.content{
+		padding: 50px;
+		height: calc(100% - 100px);
+    margin-left: 220px;
+    float: left;
+    width: calc(100% - 320px);
+	}
+}

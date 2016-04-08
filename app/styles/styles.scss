@@ -1,2 +1,16 @@
+* {
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+
+html, body, #app{
+	height: 100%;
+	width: 100%;
+}
+
 body{
+	font-family: 'ProximaNova-Regular';
+	color: $black;
+	font-size: 15px;
 }

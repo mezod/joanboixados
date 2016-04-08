@@ -6,5 +6,7 @@
 */
 
 import Menu from './Menu/Menu';
+import SlideShow from './SlideShow/SlideShow';
+import SlideShowControls from './SlideShowControls/SlideShowControls';
 
-export {Menu};
+export {Menu, SlideShow, SlideShowControls};

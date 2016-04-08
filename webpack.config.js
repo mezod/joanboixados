@@ -39,7 +39,7 @@ module.exports = {
       loaders: ['style', 'css', 'sass'],
     },
     {
-      test: /\.(png|jpg|svg|gif|eot|woff|woff2|ttf)$/,
+      test: /\.(png|otf|jpg|svg|gif|eot|woff|woff2|ttf)$/,
       loader: 'file-loader?name=[path][name]-[hash].[ext]',
     }],
   },

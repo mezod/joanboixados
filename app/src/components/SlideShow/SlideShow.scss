@@ -1,0 +1,38 @@
+.slideshow{
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+	.image-wrapper{
+		height: 100%;
+	  width: 100%;
+
+	  .prev{
+	  	cursor: w-resize;
+	  	position: relative
+	  }
+
+	  .next{
+	  	cursor: e-resize;
+	  	position: relative
+	  }
+
+		div{
+			width: 50%;
+			height: 100%;
+			float: left;
+			z-index: 1030;
+		}
+
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			margin: auto;
+		}
+	}
+}
