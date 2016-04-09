@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .js --ext .jsx",
     "build:dev": "node_modules/.bin/webpack",
     "build:prod": "NODE_ENV=production webpack -p",
-    "api": "sudo NODE_ENV=production pm2 start api/src/server.js --name='api'",
+    "api": "sudo NODE_ENV=production pm2 start api/server.js --name='api'",
     "app": "sudo NODE_ENV=production pm2 start server.js --name='app'",
     "api:stop": "sudo pm2 stop api",
     "app:stop": "sudo pm2 stop app",
