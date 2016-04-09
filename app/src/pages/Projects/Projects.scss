@@ -1,0 +1,64 @@
+.projects{
+	width: 100%;
+	
+	.project{
+		width: 24%;
+		margin: 0.5%;
+		float: left;
+
+		@media (max-width: 1281px) {
+	 		width: 49%;
+		}
+
+		@media (max-width: 769px) {
+			width: 100%;
+			margin: 0;
+		}
+
+		.dummy-wrapper{
+			width: 100%;
+			position: relative;
+			margin-bottom: 25px;
+
+			.dummy{
+				padding-top: 66%; // RATIO 3/2
+			}		
+
+	  	.media{
+				position: absolute;
+		  	top: 0;
+		  	bottom: 0;
+		  	left: 0;
+		  	right: 0;
+		  	height: 100%;
+		  	width: 100%;
+
+		  	&:hover{
+		  		opacity: 0.8;
+		  	}
+			}
+		}
+
+		.title{
+			display: block;
+			padding-bottom: 15px;
+			font-size: 16px;
+			font-family: "ProximaNova-Semibold";
+			text-decoration: none;
+			font-weight: 600;
+			color: #000;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		.description{
+			padding-bottom: 50px;
+			padding-right: 20px;
+			line-height: 1.6em;
+			height: 70px;
+			text-align: justify;
+		}
+	}
+}

@@ -33,8 +33,10 @@ export default class Menu extends React.Component {
         </ul>
 				<ul className="static">
           <li><Link to="/projects">Projects</Link></li>
+          <li><a href="http://blog.joanboixados.com"
+                 target="_blank">Blog</a></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/gallery">Say hi!</Link></li>
+          <li><a href="mailto:mezood@gmail.com">Say hi!</a></li>
         </ul>
         <ul className="social">
           <li><a href="http://www.listlogs.com/mezod"

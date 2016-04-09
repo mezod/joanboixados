@@ -11,15 +11,13 @@ export default class Gallery extends React.Component {
 
   componentWillMount() {
     const url = this.props.params.gallery || 'Photography';
-    const currentImage = this.props.params.index || null;
-    console.log(currentImage);
     fetchImages(url).then(res => {
       const newRes = res.map(obj => ({
         path: 'http://' + config.apiUrl + '/' + obj.path,
         date: obj.date,
         description: obj.description,
       }));
-      this.setState({images: newRes, currentImage: currentImage});
+      this.setState({images: newRes});
       return newRes;
     });
   }
@@ -95,13 +93,6 @@ export default class Gallery extends React.Component {
 Gallery.propTypes = {
   params: React.PropTypes.shape({
     gallery: React.PropTypes.string,
-    index: React.PropTypes.number,
   }),
-};
-
-Gallery.defaultProps = {
-  params: {
-    index: null,
-  },
 };
 
