@@ -46,7 +46,7 @@ app.use(bodyparser());
 
 app.use(router.routes());
 
-app.listen(3001);
+app.listen(process.env.PORT);
 
 process.on('uncaughtException', (err) => {
   console.log(`Caught exception: ${err}`);
