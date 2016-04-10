@@ -13,14 +13,14 @@
 */
 
 import React from 'react';
-import listlogs from '../../../images/listlogs.png';
-import multikanban from '../../../images/multikanban.png';
-import artbycontrast from '../../../images/artbycontrast.png';
-import qolle from '../../../images/qolle.png';
-import oldportfolio from '../../../images/old.png';
-import galeriacontrast from '../../../images/galeriacontrast.png';
-import pfc from '../../../images/pfc.png';
-import bergen from '../../../images/bergen.png';
+import listlogs from '../../../images/listlogs.jpg';
+import multikanban from '../../../images/multikanban.jpg';
+import artbycontrast from '../../../images/artbycontrast.jpg';
+import qolle from '../../../images/qolle.jpg';
+import oldportfolio from '../../../images/old.jpg';
+import galeriacontrast from '../../../images/galeriacontrast.jpg';
+import pfc from '../../../images/pfc.jpg';
+import bergen from '../../../images/bergen.jpg';
 
 export default class Projects extends React.Component {
   componentWillMount() {
