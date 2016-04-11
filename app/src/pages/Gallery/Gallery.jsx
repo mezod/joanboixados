@@ -14,6 +14,7 @@ export default class Gallery extends React.Component {
     fetchImages(url).then(res => {
       const newRes = res.map(obj => ({
         path: 'http://' + config.apiUrl + '/' + obj.path,
+        pathbig: 'http://' + config.apiUrl + '/' + obj.pathbig,
         date: obj.date,
         description: obj.description,
       }));
@@ -30,6 +31,7 @@ export default class Gallery extends React.Component {
       fetchImages(url).then(res => {
         const newRes = res.map(obj => ({
           path: 'http://' + config.apiUrl + '/' + obj.path,
+          pathbig: 'http://' + config.apiUrl + '/' + obj.pathbig,
           date: obj.date,
           description: obj.description,
         }));

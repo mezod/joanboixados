@@ -13,7 +13,7 @@ export default class SlideShow extends React.Component {
     return (
 			<div className="slideshow">
         <div className="image-wrapper">
-          <img src={this.props.img.path}/>
+          <img src={this.props.img.pathbig}/>
           <div className="prev" onClick={this.props.prev.bind(this)}></div>
           <div className="next" onClick={this.props.next.bind(this)}></div>
         </div>
