@@ -13,8 +13,8 @@
 */
 
 import React from 'react';
-import eventradr from '../../../images/eventradr.png';
-import portfolio from '../../../images/portfolio.png';
+import eventradr from '../../../images/eventradr.jpg';
+import portfolio from '../../../images/portfolio.jpg';
 import listlogs from '../../../images/listlogs.jpg';
 import multikanban from '../../../images/multikanban.jpg';
 import artbycontrast from '../../../images/artbycontrast.jpg';
