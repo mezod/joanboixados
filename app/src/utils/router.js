@@ -12,7 +12,7 @@ export default function render() {
           <IndexRoute component={Pages.Gallery} />
           <Route path="projects" component={Pages.Projects} />
           <Route path="about" component={Pages.About} />
-          <Route path=":gallery" component={Pages.Gallery} />
+          <Route path=":gallery(/:currentImage)" component={Pages.Gallery} />
         </Route>
       </Router>,
   document.getElementById('app')

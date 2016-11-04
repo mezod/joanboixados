@@ -28,7 +28,7 @@ export default class Menu extends React.Component {
         { this.state.galleries.map((obj) => {
           return (<li key={obj}><Link activeClassName="active"
                                       onClick={this.reload.bind(this)}
-                                     to={obj}>{obj}</Link></li>);
+                                     to={'/' + obj}>{obj}</Link></li>);
         }) }
         </ul>
 				<ul className="static">
