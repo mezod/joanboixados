@@ -1,7 +1,7 @@
-node_modules/  
 build/
-dist/ 
-npm-debug.log  
+dist/
+npm-debug.log
 .DS_Store
 api/galleries/
 prod.tar.gz
+node_modules/

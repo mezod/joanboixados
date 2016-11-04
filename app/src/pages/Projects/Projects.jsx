@@ -13,6 +13,8 @@
 */
 
 import React from 'react';
+import eventradr from '../../../images/eventradr.png';
+import portfolio from '../../../images/portfolio.png';
 import listlogs from '../../../images/listlogs.jpg';
 import multikanban from '../../../images/multikanban.jpg';
 import artbycontrast from '../../../images/artbycontrast.jpg';
@@ -28,6 +30,39 @@ export default class Projects extends React.Component {
   render() {
     return (
 			<div className="projects">
+        <div className="project">
+          <div className="dummy-wrapper">
+            <div className="dummy"></div>
+            <a href="http://eventradr.com"
+               target="_blank">
+              <img className="media" src={eventradr}/>
+            </a>
+          </div>
+          <a className="title" href="http://eventradr.com"
+             target="_blank">eventradr</a>
+          <p className="description">
+            Crowdscouting what's on in town. An agenda of events in town
+            curated by everyone. Developed with React / Redux / Koa / Webpack
+            / SASS / Bookshelf / MySQL / API REST.
+            Upvote some events!
+          </p>
+        </div>
+        <div className="project">
+          <div className="dummy-wrapper">
+            <div className="dummy"></div>
+            <a href="http://joanboixados.com"
+               target="_blank">
+              <img className="media" src={portfolio}/>
+            </a>
+          </div>
+          <a className="title" href="http://joanboixados.com"
+             target="_blank">Portfolio</a>
+          <p className="description">
+            Current portfolio developed to automatically load the images I
+            add to the several gallery folders. Developed with React / Koa /
+            Webpack / SASS and the glorious node-glob.
+          </p>
+        </div>
         <div className="project">
           <div className="dummy-wrapper">
             <div className="dummy"></div>
@@ -73,8 +108,9 @@ export default class Projects extends React.Component {
           <a className="title" href="http://www.artbycontrast.com"
              target="_blank">Art by Contrast</a>
           <p className="description">
-            The website for the new project of Galeria Contrast, Art by Contrast.
-            Developed a full CMS for art galleries with Symfony2 / MySQL.
+            The website for the new project of Galeria Contrast, Art by
+            Contrast. Developed a full CMS for art galleries with Symfony2 /
+             MySQL.
           </p>
         </div>
         <div className="project">
@@ -118,8 +154,8 @@ export default class Projects extends React.Component {
           <a className="title" href="http://www.galeriacontrast.com"
              target="_blank">Galeria Contrast</a>
           <p className="description">
-            Another instance (the original) of the CMS I developed for galleries.
-            It is developed with Symfony2 and MySQL.
+            Another instance (the original) of the CMS I developed for
+            galleries. It is developed with Symfony2 and MySQL.
           </p>
         </div>
         <div className="project">
@@ -130,7 +166,8 @@ export default class Projects extends React.Component {
               <img className="media" src={pfc}/>
             </a>
           </div>
-          <a className="title" href="http://upcommons.upc.edu/bitstream/handle/2099.1/16388/82326.pdf?sequence=1"
+          <a className="title"
+             href="http://upcommons.upc.edu/bitstream/handle/2099.1/16388/82326.pdf?sequence=1"
              target="_blank">PFC (Final Degree Project)</a>
           <p className="description">
             Evaluating the usability of a Tag-based, Multi-faceted Knowledge

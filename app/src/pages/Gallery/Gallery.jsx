@@ -2,6 +2,7 @@ import React from 'react';
 import {fetchImages} from 'requests/requests';
 import config from 'config';
 import * as Components from 'components';
+import { withRouter } from 'react-router';
 
 export default class Gallery extends React.Component {
   constructor(props) {
@@ -19,6 +20,9 @@ export default class Gallery extends React.Component {
         description: obj.description,
       }));
       this.setState({images: newRes});
+      if (this.props.params.currentImage) {
+        this.setState({currentImage: this.props.params.currentImage});
+      }
       return newRes;
     });
   }
@@ -46,21 +50,27 @@ export default class Gallery extends React.Component {
   }
   showImage(i) {
     this.setState({currentImage: i});
+    this.props.router.push('/' + this.props.params.gallery + '/' + i);
   }
   prev() {
-    const index = this.state.currentImage;
+    let index = this.state.currentImage;
     const length = this.state.images.length;
+    index = ((((index - 1) % length) + length) % length);
 
-    this.setState({currentImage: ((((index - 1) % length) + length) % length)});
+    this.setState({currentImage: index});
+    this.props.router.push('/' + this.props.params.gallery + '/' + index);
   }
   next() {
-    const index = this.state.currentImage;
+    let index = this.state.currentImage;
     const length = this.state.images.length;
+    index = ((((index + 1) % length) + length) % length);
 
-    this.setState({currentImage: ((((index + 1) % length) + length) % length)});
+    this.setState({currentImage: index});
+    this.props.router.push('/' + this.props.params.gallery + '/' + index);
   }
   back() {
     this.setState({currentImage: null});
+    this.props.router.push('/' + this.props.params.gallery);
   }
   render() {
     return (
@@ -95,6 +105,11 @@ export default class Gallery extends React.Component {
 Gallery.propTypes = {
   params: React.PropTypes.shape({
     gallery: React.PropTypes.string,
+    currentImage: React.PropTypes.number,
   }),
+  router: React.PropTypes.shape({
+    push: React.PropTypes.func.isRequired,
+  }).isRequired,
 };
 
+export default withRouter(Gallery);
