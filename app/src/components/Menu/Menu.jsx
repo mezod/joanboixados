@@ -23,7 +23,9 @@ export default class Menu extends React.Component {
   render() {
     return (
 			<div className="menu">
-        <div className="title"></div>
+        <Link to="/Photography"
+          onClick={this.reload.bind(this)}
+          className="title"></Link>
         <ul className="galleries">
         { this.state.galleries.map((obj) => {
           return (<li key={obj}><Link activeClassName="active"

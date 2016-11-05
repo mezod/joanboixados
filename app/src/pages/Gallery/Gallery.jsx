@@ -11,7 +11,11 @@ export default class Gallery extends React.Component {
   }
 
   componentWillMount() {
-    const url = this.props.params.gallery || 'Photography';
+    if (!this.props.params.gallery) {
+      this.props.router.push('/Photography');
+      return;
+    }
+    const url = this.props.params.gallery;
     fetchImages(url).then(res => {
       const newRes = res.map(obj => ({
         path: 'http://' + config.apiUrl + '/' + obj.path,
@@ -31,7 +35,7 @@ export default class Gallery extends React.Component {
   }
   componentWillUpdate(nextProps) {
     if (this.props.params.gallery !== nextProps.params.gallery) {
-      const url = nextProps.params.gallery || 'Photography';
+      const url = nextProps.params.gallery;
       fetchImages(url).then(res => {
         const newRes = res.map(obj => ({
           path: 'http://' + config.apiUrl + '/' + obj.path,
@@ -50,7 +54,9 @@ export default class Gallery extends React.Component {
   }
   showImage(i) {
     this.setState({currentImage: i});
-    this.props.router.push('/' + this.props.params.gallery + '/' + i);
+    let gallery = 'Photography';
+    if (this.props.params.gallery) gallery = this.props.params.gallery;
+    this.props.router.push('/' + gallery + '/' + i);
   }
   prev() {
     let index = this.state.currentImage;
@@ -105,7 +111,7 @@ export default class Gallery extends React.Component {
 Gallery.propTypes = {
   params: React.PropTypes.shape({
     gallery: React.PropTypes.string,
-    currentImage: React.PropTypes.number,
+    currentImage: React.PropTypes.string,
   }),
   router: React.PropTypes.shape({
     push: React.PropTypes.func.isRequired,
