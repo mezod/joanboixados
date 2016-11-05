@@ -72,7 +72,7 @@ module.exports = {
     new HtmlwebpackPlugin({
       title: 'joanboixadós',
       template: 'index.html',
-      /* favicon: './app/images/joanboixados.png', */
+      favicon: 'woodstock.ico',
     }),
   ],
 };
