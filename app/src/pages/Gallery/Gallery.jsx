@@ -18,8 +18,8 @@ export default class Gallery extends React.Component {
     const url = this.props.params.gallery;
     fetchImages(url).then(res => {
       const newRes = res.map(obj => ({
-        path: 'http://' + config.apiUrl + '/' + obj.path,
-        pathbig: 'http://' + config.apiUrl + '/' + obj.pathbig,
+        path: config.apiUrl + '/' + obj.path,
+        pathbig: config.apiUrl + '/' + obj.pathbig,
         date: obj.date,
         description: obj.description,
       }));
@@ -38,8 +38,8 @@ export default class Gallery extends React.Component {
       const url = nextProps.params.gallery;
       fetchImages(url).then(res => {
         const newRes = res.map(obj => ({
-          path: 'http://' + config.apiUrl + '/' + obj.path,
-          pathbig: 'http://' + config.apiUrl + '/' + obj.pathbig,
+          path: config.apiUrl + '/' + obj.path,
+          pathbig: config.apiUrl + '/' + obj.pathbig,
           date: obj.date,
           description: obj.description,
         }));
