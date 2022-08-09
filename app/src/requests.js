@@ -6,7 +6,7 @@ export function fetchGalleries() {
     'Content-Type': 'application/json',
   };
 
-  return fetch(`https://${config.apiUrl}/menu`, {
+  return fetch(`${config.apiUrl}/menu`, {
     method: 'GET',
     headers: headers,
   }).then(res => {
@@ -19,7 +19,7 @@ export function fetchImages(gallery) {
     'Content-Type': 'application/json',
   };
 
-  return fetch(`https://${config.apiUrl}/` + gallery, {
+  return fetch(`${config.apiUrl}/` + gallery, {
     method: 'GET',
     headers: headers,
   }).then(res => {
